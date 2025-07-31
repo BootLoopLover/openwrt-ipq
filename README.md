@@ -55,7 +55,6 @@ make -j5 V=s
 
 | Branch                                                              | Kernel | MAC80211 | Notes                                         |
 |---------------------------------------------------------------------|:------:|:--------:|-----------------------------------------------|
-| [main-nss](https://github.com/qosmio/openwrt-ipq/tree/main-nss)     | 6.12   |  6.12.6  | Current with upstream `main` (unstable)       |
 | [24.10-nss](https://github.com/qosmio/openwrt-ipq/tree/24.10-nss)   | 6.6    |  6.12.6  | Current with upstream `openwrt-24.10` (stable)|
 
 ## Table of Contents
