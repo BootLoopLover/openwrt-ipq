@@ -1,3 +1,29 @@
+# HOW TO BUILD
+
+```
+git clone https://github.com/BootLoopLover/openwrt-ipq.git
+```
+
+```
+./scripts/feeds update -a
+./scripts/feeds install -a
+```
+
+```
+cp nss-setup/config-nss.seed .config
+```
+
+```
+make menuconfig
+```
+
+# TICK ALL THE PACKAGE YOU NEED
+
+```
+make -j5 V=s
+```
+
+
 # NSS Support Matrix
 
 | Feature   | IPQ807x | IPQ60xx | Feature         | IPQ807x | IPQ60xx |
@@ -118,40 +144,6 @@ Supported devices include, but are not limited to:
 - Devices based on the **IPQ807x** (e.g., some high-end Netgear and TP-Link routers)
 - Devices based on the **IPQ6018** (e.g., certain enterprise routers)
 
----
-
-## Quickstart
-
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/qosmio/openwrt-ipq -b 24.10-nss
-   cd openwrt-ipq
-   ```
-2. Update feeds:
-   ```bash
-   ./scripts/feeds update
-   ./scripts/feeds install -a
-   ```
-3. Copy over the seed file
-   ```bash
-   cp nss-setup/config-nss.seed .config
-   ```
-4. Open the `.config` in a text editor, find your device, and remove the "#" and change `"is not set"` to `"=y"`
-
-   Example:
-   ```diff
-   -# CONFIG_TARGET_qualcommax_ipq807x_DEVICE_dynalink_dl-wrx36 is not set
-   +CONFIG_TARGET_qualcommax_ipq807x_DEVICE_dynalink_dl-wrx36=y
-   ```
-6. Generate the full config
-   ```bash
-   make defconfig V=s
-   ```
-7. Now run full build
-   ```bash
-   make download -j$(nproc) V=s
-   make -j$(nproc) V=s
-   ```
 ---
 ### Important Note:
 
