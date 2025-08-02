@@ -2,6 +2,7 @@
 
 ```
 git clone https://github.com/BootLoopLover/openwrt-ipq.git
+cd openwrt-ipq
 ```
 
 ```
